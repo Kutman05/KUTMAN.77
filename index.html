@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="public/style.css">
+  <link rel="icon" href="IMG/favicon (2).ico" href="IMG/favicon (2).ico">
+  <script  src="/scripts/script.js"></script>
+</head>
+<body>
+  
+<header>
+  <img class="logo" src="IMG/Frame 45.png" alt="">
+  <nav class="navigation">
+  <nav class="navigation">
+       <a href="#"><i class="home"></i> Home</a>
+       <a href="#"><i class=""></i> Services</a>
+       <a href="#"><i class="fas fa-info-circle"></i> About Us</a>
+       <a href="#"><i class="fas fa-images"></i> Pictures</a>
+       <button class="btnLogin-popup">Login</button>
+   </nav>
+</header>
+
+<!--con1-->
+<section class="home" id="home">
+  <div class="home-content">
+    <h1><span>IST 5-22 Nazik and Kutman</span></h1>
+    <div class="text-animate">
+      <h4>Frontent developers</h4>
+      <p>Отчет: По производственной практике
+      </p>
+    </div>
+  </div>
+</section>
+
+<!--АДАПТИВНЫЙ ТЕКСТ-->
+<!--АДАПТИВНЫЙ ТЕКСТ-->
+<!--АДАПТИВНЫЙ ТЕКСТ--><!--АДАПТИВНЫЙ ТЕКСТ-->
+  <div class="fly">         
+    <div class="fox-con">
+      <div class="lrr">
+        <div class="img1">
+          <img src="IMG/a2.png" alt="">
+        </div>
+          <div class="pr">
+            <h3 class="yo">Iphone 14 Pro Max</h3>
+            <p class="yo">В расрочку на 12 мессяцев!!!</p>
+          </div>
+      </div>
+    </div>
+    <div class="fox-con">
+      <div class="lrr">
+        <div class="img1">
+          <img src="IMG/m5.png" alt="">
+        </div>
+          <div class="pr">
+            <h3 class="yo">MacBook air pro </h3>
+            <p class="yo">В расрочку на 12 мессяцев!!!</p>
+          </div>
+      </div>
+    </div>
+    <div class="fox-con">
+      <div class="lrr">
+        <div class="img1">
+          <img src="IMG/f.png" alt="">
+        </div>
+          <div class="pr">
+            <h3 class="yo">Smart Watch</h3>
+            <p class="yo">В расрочку на 12 мессяцев!!!</p>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  
+<!--con2-->
+<div class="content">
+  <div class="card" data-price="500" data-image="IMG/a1.png">
+    <img src="IMG/a1.png" alt="Изображение карточки">
+    <div class="card-content">
+      <h3>Iphones</h3>
+      <p>Смартфоны в Бишкеке, по доступным ценам, плюс в расрочку на 12 месяцев.</p>  
+      <div class="buttons">
+        <button class="button-primary plus" onclick="addToTotal(500, 'quantity1', 'IMG/a1.png')">+</button>
+        <span class="quantity" id="quantity1">0</span>
+        <button class="button-primary minus" onclick="subtractFromTotal(500, 'quantity1')">-</button>
+        <button class="ft-fr" onclick="openCart()">500$</button>
+      </div>
+    </div>
+  </div>
+  <div class="card" data-price="950" data-image="IMG/m5.png">
+    <img src="IMG/m5.png" alt="Изображение карточки">
+    <div class="card-content">
+      <h3>Macbook</h3>
+      <p>Ноутбуки arrow Apple MacBook Pro 14" FKGT3LL/A Apple M1 Pro 10-Core, 16GB DDR5</p>
+      <div class="buttons">
+        <button class="button-primary plus" onclick="addToTotal(950, 'quantity2', 'IMG/m5.png')">+</button>
+        <span class="quantity" id="quantity2">0</span>
+        <button class="button-primary minus" onclick="subtractFromTotal(950, 'quantity2')">-</button>
+        <button class="ft-fr" onclick="openCart()">950$</button>
+      </div>
+    </div>
+  </div>
+  <div class="card" data-price="260" data-image="IMG/f2.png">
+    <img src="IMG/f2.png" alt="Изображение карточки">
+    <div class="card-content">
+      <h3>Smart watch</h3>
+      <p>смарт-часы Apple Watch Series 7 40mm (эйпл эпл вотч 7 41мм экран дисплей)</p>
+      <div class="buttons">
+        <button class="button-primary plus" onclick="addToTotal(260, 'quantity3', 'IMG/f2.png')">+</button>
+        <span class="quantity" id="quantity3">0</span>
+        <button class="button-primary minus" onclick="subtractFromTotal(260, 'quantity3')">-</button>
+        <button class="ft-fr" onclick="openCart()">260$</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cart-modal" id="cartModal">
+  <div class="cart-content">
+    <span class="close" onclick="closeCart()">&times;</span>
+    <h2>Корзина</h2>
+    
+    <!-- Добавьте поля ввода для имени и номера телефона -->
+    <label for="customerName">Имя:</label>
+    <input type="text" id="customerName" placeholder="Введите ваше имя">
+
+    <label for="customerPhone">Телефон:</label>
+    <input type="tel" id="customerPhone" placeholder="Введите ваш номер телефона">
+    
+    <ul id="cartItems"></ul>
+    <div id="cartModalImage"></div>
+    <div class="cor">
+      <div id="total">Общая сумма: $<span id="totalAmount">0</span></div>
+      <div class="total" id="totalWindow">
+        <h2>Общая сумма</h2>
+        <p id="totalWindowAmount">$0.00</p>
+      </div>
+    </div>
+    <button onclick="checkout()">Заказать</button>
+  </div>
+</div>
+
+
+
+<!--footer-->
+<footer class="footer">
+  <div class="container">
+      <div class="footer-content">
+          <div class="footer-logo">
+            <img class="logo" src="IMG/NOVA.png" alt="">
+          </div>
+          <div class="footer-links">
+              <ul>
+                  <li><a href="#">Главная</a></li>
+                  <li><a href="#">Услуги</a></li>
+                  <li><a href="#">О нас</a></li>
+                  <li><a href="#">Портфолио</a></li>
+                  <li><a href="#">Контакты</a></li>
+              </ul>
+          </div>
+          <div class="footer-contact">
+              <p>Адрес: ул. Исакеева, 13</p>
+              <p>Email: oymo.chiyme@gmail.com</p>
+              <p>Телефон: +996 500-86-25-86</p>
+          </div>
+      </div>
+      <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-telegram"></i></a>
+          <a href="https://instagram.com/kanatbekov.77?igshid=NGVhN2U2NjQ0Yg=="><i class="fab fa-instagram"></i></a>
+      </div>
+  </div>
+</footer>
+
+
+
+<!-- Остальной контент страницы здесь -->
+
+
+
+
+</body>
+</html>
